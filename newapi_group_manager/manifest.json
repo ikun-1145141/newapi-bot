@@ -1,0 +1,50 @@
+{
+  "name": "newapi_group_manager",
+  "version": "0.4.1",
+  "description": "绑定 NewAPI 账号、查询调用趋势与模型延迟，并管理受管群和 NAI 延迟图",
+  "author": "Codex",
+  "dependencies": {
+    "plugins": [],
+    "components": []
+  },
+  "include": [
+    {
+      "component_type": "command",
+      "component_name": "api",
+      "dependencies": [],
+      "enabled": true
+    },
+    {
+      "component_type": "tool",
+      "component_name": "newapi_account_status",
+      "dependencies": [],
+      "enabled": true
+    },
+    {
+      "component_type": "tool",
+      "component_name": "newapi_usage_trend",
+      "dependencies": [],
+      "enabled": true
+    },
+    {
+      "component_type": "event_handler",
+      "component_name": "group_gate",
+      "dependencies": [],
+      "enabled": true
+    },
+    {
+      "component_type": "event_handler",
+      "component_name": "chart_events",
+      "dependencies": [],
+      "enabled": true
+    }
+  ],
+  "entry_point": "plugin.py",
+  "api_version": {
+    "adapter_api": "1.0.0",
+    "event_api": "1.0.0",
+    "storage_api": "1.0.0"
+  },
+  "categories": ["information"],
+  "tags": ["qq", "newapi", "group-management"]
+}
